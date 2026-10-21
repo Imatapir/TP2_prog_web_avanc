@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --paper: #f3ecdd;
+    --paper-dark: #e8ddc6;
+    --ink: #2b2620;
+    --ink-soft: #5c5346;
+    --leather: #7a2e2e;
+    --leather-dark: #5c2222;
+    --gold: #a8823f;
+    --rule: #c9bfa8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+}
+
+h1 {
+    font-size: 2.1rem;
+    padding: 28px 30px 6px 30px;
+    border-bottom: 2px solid var(--leather);
+    margin: 0 30px 10px 30px;
+    padding-left: 0;
+    margin-left: 30px;
+}
+
+h3 {
+    margin: 20px 30px 10px 30px;
+}
+
+nav {
+    background-color: var(--ink);
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    padding: 16px 18px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+table {
+    width: calc(100% - 60px);
+    margin: 10px 30px 20px 30px;
+    border-collapse: collapse;
+}
+
+thead th {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--leather);
+    color: var(--leather);
+}
+
+tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+}
+
+tbody tr:hover {
+    background-color: var(--paper-dark);
+}
+
+table a,
+main p a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+}
+
+table a:hover,
+main p a:hover {
+    color: var(--leather);
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid var(--rule);
+    background: transparent;
+    color: var(--ink);
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-bottom-color: var(--leather);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--leather);
+    color: var(--paper);
+    border: none;
+    padding: 10px 20px;
+    margin: 18px 30px;
+    border-radius: 2px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--leather-dark);
+}
+
+form .btn {
+    margin: 6px 0 0 0;
+}
+
+.btn.red {
+    background-color: var(--ink);
+}
+
+.btn.red:hover {
+    background-color: #000;
+}
+
+.error {
+    color: var(--leather);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin: 18px 30px;
+}
+
+.actions .btn,
+.actions form .btn {
+    margin: 0 12px 0 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+}
+
+main > .error {
+    margin: 10px 30px;
+}
+
+main > p {
+    margin: 10px 30px;
+}
+
+main > form {
+    margin: 20px 30px;
+    max-width: 480px;
+}
