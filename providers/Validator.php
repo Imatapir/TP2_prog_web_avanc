@@ -22,9 +22,9 @@ class Validator {
 
     //regles
 
-    public function required(){
+    public function required($message = null){
         if(empty($this->value)){
-            $this->errors[$this->key]="$this->name is required";
+            $this->errors[$this->key] = $message ?? "$this->name is required";
         }
         return $this;
     }
@@ -43,9 +43,9 @@ class Validator {
         return $this;
     }
 
-    public function int(){
+    public function int($message = null){
         if(filter_var($this->value, FILTER_VALIDATE_INT) === false){
-             $this->errors[$this->key]="$this->name must be an integer";
+            $this->errors[$this->key] = $message ?? "$this->name must be an integer";
         }
         return $this;
     }

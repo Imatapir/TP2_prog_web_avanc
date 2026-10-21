@@ -39,7 +39,7 @@ class LivreController{
         $val->field('titre', $data['titre'])->required()->max(100);
         $val->field('prix', $data['prix'])->required()->numeric();
         $val->field('stock', $data['stock'])->int();
-        $val->field('auteur_id', $data['auteur_id'], 'Auteur')->required()->int();
+        $val->field('auteur_id', $data['auteur_id'], 'Auteur')->int()->required('Vous devez choisir un auteur');
 
         if($val->isSuccess()){
             $crud = new Livre;
@@ -75,7 +75,7 @@ class LivreController{
             $val->field('titre', $data['titre'])->required()->max(100);
             $val->field('prix', $data['prix'])->required()->numeric();
             $val->field('stock', $data['stock'])->int();
-            $val->field('auteur_id', $data['auteur_id'], 'Auteur')->required()->int();
+            $val->field('auteur_id', $data['auteur_id'], 'Auteur')->int()->required('Vous devez choisir un auteur');
 
             if($val->isSuccess()){
                 $crud = new Livre;

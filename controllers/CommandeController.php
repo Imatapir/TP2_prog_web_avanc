@@ -77,7 +77,7 @@ class CommandeController{
 
     public function ajouter(array $data){
         $val = new Validator;
-        $val->field('livre_id', $data['livre_id'], 'livre')->required()->int();
+        $val->field('livre_id', $data['livre_id'], 'livre')->int()->required('Vous devez choisir un livre');
         $val->field('quantite', $data['quantite'], 'quantité')->required()->int();
 
         if($val->isSuccess()){
@@ -98,7 +98,7 @@ class CommandeController{
 
         public function store(array $data){
         $val = new Validator;
-        $val->field('client_id', $data['client_id'], 'client')->required()->int();
+        $val->field('client_id', $data['client_id'], 'client')->int()->required('Vous devez choisir un client');
 
         $errors = [];
         if(!$val->isSuccess()){
