@@ -36,7 +36,7 @@ class LivreController{
 
     public function store(array $data){
         $val = new Validator;
-        $val->field('titre', $data['titre'])->required()->max(30);
+        $val->field('titre', $data['titre'])->required()->max(100);
         $val->field('prix', $data['prix'])->required()->numeric();
         $val->field('stock', $data['stock'])->int();
         $val->field('auteur_id', $data['auteur_id'], 'Auteur')->required()->int();
